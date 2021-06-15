@@ -14,3 +14,8 @@ You need to customize and replace:
 * **CHAT_ID**: Chat ID of your telegram public/private group
 
 You can put it in your crontab and schedule it
+
+### Contacts
+
+* Telegram: https://t.me/ItalyADAPool
+* Website: https://www.hwlegnano.it/contatta
