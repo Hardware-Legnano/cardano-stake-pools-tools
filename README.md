@@ -9,7 +9,7 @@ A simple bash script to parse leaderlog.json (created by **cncli** - https://git
 
 You need to customize and replace:
 
-* **LEADERLOG.JSON**: replace it with the path to your leaderlog.json, you can use curl or echo it and pipe to jq
+* **LEADERLOG.JSON**: replace it with the path to your leaderlog.json, you can use curl or cat it and pipe to jq
 * **APIKEY**: API key of your telegram bot
 * **CHAT_ID**: Chat ID of your telegram public/private group
 
