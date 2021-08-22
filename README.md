@@ -19,6 +19,7 @@ You can put it in your crontab and schedule it
 **Package needed**: **default-mysql-client** (sudo apt install default-mysql-client)
 
 Bash script used to update stake quantity and drop participation based on staked amount. MySQL/MariaDB db used.
+URL: https://ada-airdrop.hwlegnano.it/
 
 You need to customize and replace:
 
