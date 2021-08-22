@@ -15,6 +15,17 @@ You need to customize and replace:
 
 You can put it in your crontab and schedule it
 
+## ada-airdrop.sh
+**Package needed**: **default-mysql-client** (sudo apt install default-mysql-client)
+
+Bash script used to update stake quantity and drop participation based on staked amount. MySQL/MariaDB db used.
+
+You need to customize and replace:
+
+* **XXXXXX**: replace it with your relevant data
+
+You can put it in your crontab and schedule it
+
 ### Contacts
 
 * Telegram: https://t.me/ItalyADAPool
