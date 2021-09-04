@@ -49,7 +49,7 @@ This script calls cncli to calculate leaderlog.
 This script must:
 
 * be run 18 hours or earlier prior to epoch end
-* have cncli.db available (/usr/local/bin/cncli sync --host 127.0.0.1 --port 6000 --db /home/USER/cardano-node/scripts/cncli.db - strongly recommended to run this as systemd service
+* have cncli.db available --- /usr/local/bin/cncli sync --host 127.0.0.1 --port 6000 --db /home/USER/cardano-node/scripts/cncli.db --- strongly recommended to run this as systemd service
 
 You need to customize and replace:
 
