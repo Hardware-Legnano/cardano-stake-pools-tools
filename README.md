@@ -39,7 +39,24 @@ You need to fill in these variables:
 * **USER**: fill in your USER
 * **PASSWORD**: fill in your PASSWORD 
 
-You can put it in your crontab and schedule it
+You can put it in your crontab and schedule it after cncli-leaderlog-snapshot.sh
+
+## cncli-leaderlog-snapshot.sh
+**Package needed**: **cncli** (https://github.com/AndrewWestberg/cncli)
+URL: https://www.hwlegnano.it/cardano/
+
+This script calls cncli to calculate leaderlog.
+This script must:
+
+* be run 18 hours or earlier prior to epoch end
+* have cncli.db available (/usr/local/bin/cncli sync --host 127.0.0.1 --port 6000 --db /home/USER/cardano-node/scripts/cncli.db - strongly recommended to run this as systemd service
+
+You need to customize and replace:
+
+* **USER**: replace with your $home user
+* **POOL_ID**: replace with your pool id (you can find it in adapools.org)
+
+You can put it in your crontab and schedule it after cncli-leaderlog-snapshot.sh
 
 ### Contacts
 
