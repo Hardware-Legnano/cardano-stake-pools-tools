@@ -27,6 +27,20 @@ You need to customize and replace:
 
 You can put it in your crontab and schedule it
 
+## ftp-leaderlog-put.sh
+**Package needed**: **ftp** (sudo apt install ftp)
+
+Bash script used to upload calculated leaderlog (by cncli-leaderlog-snapshot.sh) to a remote hosting provider.
+URL: https://www.hwlegnano.it/cardano/
+
+You need to fill in these variables:
+
+* **HOST**: fill in your HOSTNAME
+* **USER**: fill in your USER
+* **PASSWORD**: fill in your PASSWORD 
+
+You can put it in your crontab and schedule it
+
 ### Contacts
 
 * Telegram: https://t.me/ItalyADAPool
