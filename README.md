@@ -58,6 +58,18 @@ You need to customize and replace:
 
 You can put it in your crontab and schedule it after cncli-leaderlog-snapshot.sh
 
+## leaderlog_minted.php
+
+Simple php code to fetch leaderlog.json and print slots/blocks minted, missed and coming so far.
+URL: https://www.hwlegnano.it/cardano/
+
+You need to fill in these variables:
+
+\_URL: fill in your URL to fetch leaderlog.json from
+\_POOL: fill in your pool ID, you can easily find it in adapools.org
+1_TOKEN: if you use Basic Auth to protect leaderlog.json, fill in your auth token
+2_TOKEN: register on blockfrost.io and fill in your project id
+
 ### Contacts
 
 * Telegram: https://t.me/ItalyADAPool
