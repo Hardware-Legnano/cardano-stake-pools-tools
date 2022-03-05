@@ -23,7 +23,11 @@ URL: https://ada-airdrop.hwlegnano.it/
 
 You need to customize and replace:
 
-* **XXXXXX**: replace it with your relevant data
+* **ID**: replace it with your Blockfrost project ID
+* **USER**: replace it with your DB user
+* **SCHEMA**: replace it with your DB schema (DB)
+* **HOST**: replace it with your DB host provider
+* **TABLE**: replace it with your DB schema table
 
 You can put it in your crontab and schedule it
 
