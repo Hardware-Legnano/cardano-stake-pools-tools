@@ -59,3 +59,10 @@ mysql -u USER -D SCHEMA -h HOST -N -e "DELETE FROM TABLE WHERE stakeAddress = '$
 fi
 done
 
+### TXs EXPORT ###
+
+curl http://127.0.0.1:8090/v2/wallets/WALLETID/transactions | jq '[.[] | select((.amount.quantity>=50000000 and .amount.quantity<=51000000) or (.amount.quantity>=100000000 and .amount.quantity<=101000000))]' > /home/username/cardano-node/txs.json
+
+### BACKUP DB ###
+
+mysqldump -u USER -h HOST SCHEMA > /home/username/cardano-node/airdb.sql
