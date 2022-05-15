@@ -12,7 +12,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_POSTFIELDS => "",
   CURLOPT_HTTPHEADER => array(
-    "Authorization: 1_TOKEN",
+    "Authorization: Basic 1_TOKEN",
     "cache-control: no-cache",
     "content-type: application/json"
   ),
@@ -26,16 +26,13 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-#  echo $response;
+
   $decodedJson = json_decode($response);
 
-#  var_dump($array);
-//$slotnumbering = 1;
 $slotheight = 0;
 $slotmissed = 0;
 $slotminted = 0;
 foreach($decodedJson->assignedSlots as $slots){
-// echo $slots->slot;
 
  $curl = curl_init();
           
@@ -61,23 +58,20 @@ curl_close($curl);
  if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-#  echo $response;
+
   $decodedJsonFor = json_decode($response);
   
-#  echo $decodedJsonFor->status_code;
- 
- if($decodedJsonFor->status_code == "404") {
-	 //echo "<center><b>Slot number: <font style='color:#0044aa'>" . $slotnumbering++ . "</font> | Slot height is coming </b></center>\n";
-	 $slotheight++;
-	 
- } elseif ($decodedJsonFor->slot_leader != "_POOL") {
-	 //echo "<center><b>Slot number: <font style='color:#0044aa'>" . $slotnumbering++ . "</font> | <font style='color:red'>Block missed! </font></b></center>\n";
-	 $slotmissed++;
-	 
- } else {
-	 //echo "<center><b>Slot number: <font style='color:#0044aa'>" . $slotnumbering++ . "</font> | <font style='color:green'>Block minted! </font></b></center>\n";
-	 $slotminted++;
- }
+$date = date('c');
+
+
+if($slots->at < $date || $decodedJsonFor->slot_leader != "pool1mchqp2fr7mwsz6jrpplxpr0ekmwafev8arl57wwxfck5x0dwv60"){
+    $slotmissed++;
+} elseif($decodedJsonFor->status_code == "404"){
+    $slotheight++;
+} else {
+    $slotminted++;
+}
+
 }
  
 }
