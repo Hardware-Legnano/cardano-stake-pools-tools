@@ -64,7 +64,7 @@ curl_close($curl);
 $date = date('c');
 
 
-if($slots->at < $date || $decodedJsonFor->slot_leader != "pool1mchqp2fr7mwsz6jrpplxpr0ekmwafev8arl57wwxfck5x0dwv60"){
+if($slots->at < $date || ($decodedJsonFor->slot_leader != null && $decodedJsonFor->slot_leader != "pool1mchqp2fr7mwsz6jrpplxpr0ekmwafev8arl57wwxfck5x0dwv60")){
     $slotmissed++;
 } elseif($decodedJsonFor->status_code == "404"){
     $slotheight++;
